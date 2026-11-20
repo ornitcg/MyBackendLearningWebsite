@@ -192,7 +192,7 @@ textarea.mono{font-family:var(--f-mono);font-size:.85rem;direction:ltr;text-alig
 .top::after{content:"";position:absolute;inset:auto 0 -1px 0;height:4px;background:linear-gradient(90deg,var(--g0),var(--sun),var(--g1),var(--g3),var(--sun),var(--g0))}
 .brand-mark{background:linear-gradient(120deg,var(--g0),var(--g1));color:#fff}
 .hero h1 mark{color:inherit;background:linear-gradient(transparent 58%,color-mix(in srgb,var(--sun) 75%,transparent) 58%);padding:0 .1em}
-.hero .cone{width:26px;height:34px;vertical-align:-8px;margin-inline-end:6px}
+.hero .cone{width:30px;height:24px;vertical-align:-6px;margin-inline-end:8px}
 .panel,.stat,.task{box-shadow:0 6px 22px color-mix(in srgb,var(--g1) 8%,transparent)}
 .btn.primary{background:linear-gradient(120deg,var(--g0),var(--g1));border-color:transparent;color:#fff}
 .rail .group{color:var(--c)}
@@ -280,44 +280,51 @@ textarea.mono{font-family:var(--f-mono);font-size:.85rem;direction:ltr;text-alig
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/http.min.js"></script>
 <script>
 (() => {
-/* faint background illustration: ice cream, popsicles, sprinkles, sparkles and code marks */
+/* faint background illustration: line drawings from the CS world (server, database, cloud, terminal, gear, network) */
 const ART = `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
-<g stroke-linecap="round" stroke-linejoin="round">
- <g transform="translate(36 28) rotate(-14)" opacity=".5">
-  <path d="M6 34 L22 78 L38 34 Z" fill="#FFD43B" stroke="#E0A800" stroke-width="2"/>
-  <path d="M12 44 L32 44 M15 54 L29 54 M18 64 L26 64" stroke="#E0A800" stroke-width="2"/>
-  <circle cx="22" cy="28" r="17" fill="#F9A8D4"/>
-  <circle cx="22" cy="10" r="12" fill="#C4A1FF"/>
-  <circle cx="23" cy="-4" r="4" fill="#E0337E"/>
+<g fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity=".55">
+ <g transform="translate(28 24)" stroke="#A78BFA">
+  <rect x="0" y="0" width="54" height="72" rx="6"/>
+  <path d="M0 24 H54 M0 48 H54"/>
+  <path d="M10 12 H30 M10 36 H30 M10 60 H30"/>
+  <circle cx="43" cy="12" r="2.5" fill="#F472B6" stroke="none"/>
+  <circle cx="43" cy="36" r="2.5" fill="#E0A800" stroke="none"/>
+  <circle cx="43" cy="60" r="2.5" fill="#F472B6" stroke="none"/>
  </g>
- <g transform="translate(222 176) rotate(16)" opacity=".5">
-  <rect x="0" y="0" width="30" height="50" rx="14" fill="#C4A1FF"/>
-  <path d="M0 22 Q15 30 30 22 L30 36 Q15 44 0 36 Z" fill="#F9A8D4"/>
-  <rect x="12" y="48" width="6" height="22" rx="3" fill="#FFD43B"/>
+ <g transform="translate(228 30)" stroke="#F472B6">
+  <ellipse cx="26" cy="8" rx="26" ry="8"/>
+  <path d="M0 8 V54 A26 8 0 0 0 52 54 V8"/>
+  <path d="M0 24 A26 8 0 0 0 52 24 M0 39 A26 8 0 0 0 52 39"/>
  </g>
- <g transform="translate(120 230) rotate(8)" opacity=".42">
-  <path d="M4 22 L16 52 L28 22 Z" fill="#FFD43B"/>
-  <circle cx="16" cy="17" r="13" fill="#E9D5FF"/>
-  <path d="M5 14 q11 -9 22 0" stroke="#F472B6" stroke-width="3" fill="none"/>
+ <g transform="translate(118 44)" stroke="#E0A800">
+  <path d="M10 10 L50 4 M10 10 L34 46 M50 4 L34 46 M34 46 L72 40 M50 4 L72 40"/>
+  <circle cx="10" cy="10" r="6" fill="#FFF4C2"/><circle cx="50" cy="4" r="6" fill="#FFF4C2"/>
+  <circle cx="34" cy="46" r="6" fill="#FFF4C2"/><circle cx="72" cy="40" r="6" fill="#FFF4C2"/>
  </g>
- <g stroke-width="4" opacity=".55">
-  <path d="M150 40 l10 4" stroke="#F472B6"/><path d="M190 70 l4 10" stroke="#FFD43B"/>
-  <path d="M110 120 l9 -5" stroke="#A78BFA"/><path d="M260 40 l8 6" stroke="#FFD43B"/>
-  <path d="M40 170 l10 2" stroke="#F472B6"/><path d="M290 120 l-3 10" stroke="#A78BFA"/>
-  <path d="M70 280 l8 -6" stroke="#FFD43B"/><path d="M200 290 l10 3" stroke="#F472B6"/>
-  <path d="M250 250 l2 10" stroke="#A78BFA"/><path d="M170 150 l7 7" stroke="#FFD43B"/>
+ <g transform="translate(112 168)" stroke="#A78BFA">
+  <path d="M18 44 A14 14 0 0 1 20 16 A20 20 0 0 1 58 12 A15 15 0 0 1 72 44 Z"/>
+  <path d="M30 56 V68 M46 56 V68 M38 56 V74" stroke="#F472B6"/>
  </g>
- <g fill="#FFD43B" opacity=".6">
-  <path d="M232 92 l3 9 9 3 -9 3 -3 9 -3 -9 -9 -3 9 -3 z"/>
-  <path d="M78 214 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 z" fill="#F472B6"/>
-  <path d="M290 296 l2 6 6 2 -6 2 -2 6 -2 -6 -6 -2 6 -2 z" fill="#A78BFA"/>
+ <g transform="translate(206 196)" stroke="#F472B6">
+  <rect x="0" y="0" width="86" height="58" rx="6"/>
+  <path d="M0 14 H86"/>
+  <circle cx="9" cy="7" r="1.8" fill="#F472B6"/><circle cx="16" cy="7" r="1.8" fill="#E0A800" stroke="#E0A800"/><circle cx="23" cy="7" r="1.8" fill="#A78BFA" stroke="#A78BFA"/>
+  <path d="M10 28 L18 34 L10 40 M24 42 H40" stroke="#A78BFA"/>
  </g>
- <text x="150" y="112" font-family="monospace" font-size="26" font-weight="700" fill="#A78BFA" opacity=".45">{ }</text>
- <text x="22" y="132" font-family="monospace" font-size="18" font-weight="700" fill="#F472B6" opacity=".45">&lt;/&gt;</text>
- <text x="246" y="236" font-family="monospace" font-size="14" font-weight="700" fill="#E0A800" opacity=".5">200</text>
+ <g transform="translate(58 236)" stroke="#E0A800">
+  <circle cx="0" cy="0" r="12"/><circle cx="0" cy="0" r="4"/>
+  <path stroke-width="5" d="M0 -14 V-19 M0 14 V19 M-14 0 H-19 M14 0 H19 M10 -10 L13.5 -13.5 M-10 10 L-13.5 13.5 M10 10 L13.5 13.5 M-10 -10 L-13.5 -13.5"/>
+ </g>
+ <g font-family="monospace" font-weight="700" stroke="none">
+  <text x="22" y="140" font-size="22" fill="#F472B6">&lt;/&gt;</text>
+  <text x="250" y="140" font-size="22" fill="#A78BFA">{ }</text>
+  <text x="140" y="146" font-size="12" fill="#E0A800">01101</text>
+  <text x="18" y="306" font-size="12" fill="#A78BFA">GET /tasks</text>
+  <text x="236" y="296" font-size="13" fill="#E0A800">200 OK</text>
+ </g>
 </g></svg>`;
 document.documentElement.style.setProperty("--pattern", 'url("data:image/svg+xml,' + encodeURIComponent(ART) + '")');
-const CONE = '<svg class="cone" viewBox="0 0 26 34" aria-hidden="true"><path d="M4 14 L13 33 L22 14 Z" fill="#FFD43B"/><circle cx="13" cy="11" r="9" fill="#F472B6"/><circle cx="13" cy="4" r="5" fill="#A78BFA"/></svg>';
+const CONE = '<svg class="cone" viewBox="0 0 32 26" aria-hidden="true"><rect x="1.5" y="1.5" width="29" height="23" rx="4" fill="#2B1431" stroke="#A78BFA" stroke-width="2"/><path d="M7 10 L11 13 L7 16" fill="none" stroke="#FFD43B" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 17 H21" stroke="#F472B6" stroke-width="2.2" stroke-linecap="round"/></svg>';
 const C = window.COURSE || [];
 const ALL = [];
 C.forEach((m, mi) => m.lessons.forEach((l, li) => ALL.push({ m, l, mi, li })));
